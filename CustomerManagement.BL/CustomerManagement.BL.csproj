@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Repo\" />
+    <None Remove="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repo\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
 </Project>
