@@ -4,11 +4,11 @@ public class Customer
 {
 
     public int CustomerId { get; set; }
+    public int CustomerType { get; set; }
     public string? LastName { get; set; }
     public string? FirstName { get; set; }
     public string? EmailAddress { get; set; }
     public List<Address> AddressList { get; set; }
-
 
     public Customer(int customerId)
     {
