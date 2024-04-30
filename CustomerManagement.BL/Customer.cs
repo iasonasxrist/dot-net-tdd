@@ -1,6 +1,6 @@
 ﻿namespace CustomerManagement.BL;
 
-public class Customer
+public class Customer : EntityBase, ILoggable
 {
 
     public int CustomerId { get; set; }
@@ -34,7 +34,9 @@ public class Customer
         }
     }
 
-    public bool Validate()
+    public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
+
+    public override bool Validate()
     {
         var isValid = true;
         if (string.IsNullOrWhiteSpace(LastName)) isValid = false;

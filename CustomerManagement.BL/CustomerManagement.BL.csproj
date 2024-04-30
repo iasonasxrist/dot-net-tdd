@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="Repo\" />
     <None Remove="Helper\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repo\" />
     <Folder Include="Helper\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
