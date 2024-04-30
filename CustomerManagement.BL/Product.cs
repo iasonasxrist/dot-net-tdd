@@ -1,7 +1,8 @@
 ﻿
+using System.Net.Mail;
 using CustomerManagement.BL;
 
-public class Product : EntityBase
+public class Product : EntityBase, ILoggable
 {
 	public double CurrentPrice { get; set; }
     public string  ProductDescription { get; set; }
@@ -12,7 +13,7 @@ public class Product : EntityBase
     {
         get
         {
-            return StringHandler.InsertSpaces(_productName);
+            return _productName.InsertSpaces();
         }
         set
         {
@@ -41,9 +42,10 @@ public class Product : EntityBase
 
         if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
         if (CurrentPrice == null) isValid = false;
-
         return isValid;
     }
+
+    public string Log() => $"{ProductId}: {ProductName} : Details: {ProductDescription} Status: {EntityState.ToString()}";
 
 }
 

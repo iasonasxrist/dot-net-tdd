@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Net.Mail;
 using CustomerManagement.BL;
 
-public class Order
+public class Order : EntityBase, ILoggable
 {
 	public DateTimeOffset? OrderDate { get;  set; }
     public int OrderId { get; private set; }
@@ -21,5 +22,11 @@ public class Order
         return new List<Order>();
     }
 
+    public string Log() => $"{OrderId}: {CustomerId} List: {OrderDate.Value.Date} Status: {EntityState.ToString()}";
+
+    public override bool Validate()
+    {
+        throw new NotImplementedException();
+    }
 }
 
