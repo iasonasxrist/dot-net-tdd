@@ -2,7 +2,12 @@
 
 public static class StringHandler
 {
-	public static string InsertSpaces(string source)
+	/// <summary>
+	/// Inserts spaces before each capital letter
+	/// </summary>
+	/// <param name="source"></param>
+	/// <returns></returns>
+	public static string InsertSpaces(this string source)
 	{
 
 		string result = string.Empty;

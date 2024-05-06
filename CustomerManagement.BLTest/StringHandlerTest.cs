@@ -9,7 +9,7 @@ public class StringHandlerTests
         string input = null;
 
         // Act
-        string result = StringHandler.InsertSpaces(input);
+        string result = input.InsertSpaces();
 
         // Assert
         Assert.Equal(string.Empty, result);
@@ -22,7 +22,7 @@ public class StringHandlerTests
         string input = string.Empty;
 
         // Act
-        string result = StringHandler.InsertSpaces(input);
+        string result = input.InsertSpaces();
 
         // Assert
         Assert.Equal(string.Empty, result);
@@ -35,7 +35,7 @@ public class StringHandlerTests
         string input = "hello world";
 
         // Act
-        string result = StringHandler.InsertSpaces(input);
+        string result = input.InsertSpaces();
 
         // Assert
         Assert.Equal("hello world", result);
@@ -48,11 +48,10 @@ public class StringHandlerTests
         string input = "HelloWorld";
 
         // Act
-        string result = StringHandler.InsertSpaces(input);
+        string result = input.InsertSpaces();
 
         // Assert
         Assert.Equal("Hello World", result);
     }
 
-    // Add more test cases as needed
 }
